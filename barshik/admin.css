@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-panel {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.add-product form, .products-list ul {
+    margin-top: 20px;
+}
+
+input[type="text"], textarea, input[type="file"], button {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.products-list ul li {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.products-list ul li img {
+    max-width: 100px;
+}
+
+.products-list ul li div {
+    margin-left: 20px;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
