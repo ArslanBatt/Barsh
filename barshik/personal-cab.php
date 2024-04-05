@@ -31,57 +31,6 @@
                         <h3 class="order">Мои заказы</h3>
                         <table>
                             <thead>
-                                <tr>
-                                    <th>Заказ</th>
-                                    <th>Дата</th>
-                                    <th>Состав заказа</th>
-                                    <th>Сумма</th>
-                                    <th>Статус</th>
-                                    <th>Отзыв</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Заказ #1</td>
-                                    <td>10.10.2021</td>
-                                    <td>
-                                        <ol>
-                                        <li>Вода</li>
-                                        <li>Вода</li>
-                                        </ol>
-                                     </td>
-                                    <td>150 р </td>
-                                    <td>Доставлен</td>
-                                    <td><a href=""   data-bs-toggle="modal" data-bs-target="#feedback" ><img src="images\writing.png" alt="" class="img-writing"></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Заказ #2</td>
-                                    <td>15.10.2021</td>
-                                    <td>
-                                        <ol>
-                                        <li>Вода</li>
-                                        <li>Милкшейк</li>
-                                        </ol>
-                                     </td>
-                                    <td>275 р </td>
-                                    <td>В пути</td>
-                                    <td><a href=""   data-bs-toggle="modal" data-bs-target="#feedback" ><img src="images\writing.png" alt="" class="img-writing"></a></td>
-
-                                </tr>
-                                <tr>
-                                    <td>Заказ #3</td>
-                                    <td>15.10.2021</td>
-                                    <td>
-                                        <ol>
-                                        <li>Вода</li>
-                                        <li>Вода</li>
-                                        </ol>
-                                     </td>
-                                    <td>175 р</td>
-                                    <td>Доставлен</td>
-                                    <td><a href=""   data-bs-toggle="modal" data-bs-target="#feedback" ><img src="images\writing.png" alt="" class="img-writing"></a></td>
-
-                                </tr>
                             </tbody>
                         </table>
                     </div>
