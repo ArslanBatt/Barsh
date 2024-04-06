@@ -148,6 +148,8 @@
 
 </main>
     <!-- подвал -->
-
+    <?php
+    include "footer.php"
+    ?>
 </body>
 </html>
