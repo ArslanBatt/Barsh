@@ -1,5 +1,6 @@
-<?php
-    include"header.php";
+<?php 
+    include "header.php"; 
+    session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,6 @@
     <style>
         a{
             text-decoration: none;  
-            
         }
         .reg{
 width: 50%;
@@ -39,11 +39,11 @@ text-decoration: none;
     <div class="auto-main">
         <h2>Авторизация</h2>
         <form action="auto_db.php" method="post" class="form-auto">
-            <input required  type="email" name="email" placeholder=" email">
-            <input required   type="password" name="password" placeholder="пароль">
-            <button class = "entrance">Войти</button>
-            <a class="reg" href="reg.php">Регистрация</a>
-        </form>
+    <input required type="email" id="email" name="email" placeholder="email">
+    <input required type="password" name="password" placeholder="пароль">
+    <button class="entrance">Войти</button>
+    <a class="reg" href="reg.php">Регистрация</a>
+</form>
     </div>
 </body>
 </html>

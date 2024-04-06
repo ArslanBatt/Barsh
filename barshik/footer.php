@@ -21,9 +21,9 @@
             <div class="connect">
             <p>Связь с нами</p> 
             <div class="images-connection">
-                <img src="images/instagram.png" alt=""class="icon-whatsapp">
-                <img src="images\icons8-vk-com-48.png" alt="" srcset="">
-                <img src="images\iconfinder-social-media-applications-23whatsapp-4102606_113811.png" class="icon-whatsapp">
+                <img src="../images/instagram.png" alt=""class="icon-whatsapp">
+                <img src="../images\icons8-vk-com-48.png" alt="" srcset="">
+                <img src="../images\iconfinder-social-media-applications-23whatsapp-4102606_113811.png" class="icon-whatsapp">
             </div>
             </div>
             <div class="clock-work">
