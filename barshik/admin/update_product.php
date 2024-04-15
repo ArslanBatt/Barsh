@@ -1,23 +1,23 @@
 <?php
-// Подключаемся к базе данных
 include "../connect.php";
 
-// Получаем данные товара из запроса POST
-$id = $_POST['Id_product'];
-$name = $_POST['Name'];
-$description = $_POST['Description'];
-$category_id = $_POST['Category_id'];
-$price = $_POST['Price'];
-$image = $_FILES['image']['name'];
+if (isset($_POST['update_product'])) {
+    $id = $_POST['Id_product'];
+    $name = $_POST['Name'];
+    $description = $_POST['Description'];
+    $price = $_POST['Price'];
+    $category_id = $_POST['Category_id'];
 
-// Обновляем данные товара в базе данных
-$sql = "UPDATE product SET Name = '$name', Description = '$description', Category_id = '$category_id', Price = '$price', Image = '$image' WHERE Id_product = '$id'";
-if (mysqli_query($con, $sql)) {
-    // Товар успешно обновлен
-    echo "Товар успешно обновлен.";
+    // Обновляем данные товара в базе данных
+    $sql = "UPDATE product SET Name = '$name', Description = '$description', Price = '$price', Category_id = '$category_id' WHERE Id_product = '$id'";
+
+    if (mysqli_query($con, $sql)) {
+        echo "Товар успешно обновлен.";
+        header('Location: index.php'); // Перенаправляем на страницу с товарами после обновления
+    } else {
+        echo "Ошибка при обновлении товара: " . mysqli_error($con);
+    }
 } else {
-    // Ошибка при обновлении товара
-    echo "Ошибка: " . $sql . "<br>" . mysqli_error($con);
+    echo "Произошла ошибка. Проверьте, что все необходимые данные были переданы.";
 }
-header('Location: index.php');
 ?>

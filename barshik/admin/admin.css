@@ -60,3 +60,13 @@ button:hover {
     border-radius: 3px;
     cursor: pointer;
 }
+.list{
+    margin-bottom: 0px;
+}
+.admin-category{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
