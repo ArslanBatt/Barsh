@@ -15,10 +15,10 @@ if(!empty($user1)){//empty — Проверяет, пуста ли переме�
 	echo "Данная почта уже используется!";
 	exit();
 }
-if(!empty($user2)){//empty — Проверяет, пуста ли переменная
-	echo "Данный  уже используется!";
+if(empty($user2)){//empty — Проверяет, пуста ли переменная
+	echo "Данный уже используется!";
 	exit();
 }
 $insert = mysqli_query($con,"INSERT INTO `users` (  `email`,`password_hash`, `Bonus_points`)VALUES( '$email','$password', '1' )");
 // $_SESSION["user_id"] = mysqli_insert_id($con);
-header('Location: personal-cab.php');
+header('Location: auto.php');

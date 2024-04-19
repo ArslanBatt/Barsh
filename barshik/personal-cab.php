@@ -1,7 +1,23 @@
 <?php
-    include "header.php";
     include "connect.php";
     session_start();
+    if (isset($_POST['edit'])) {
+      $user_email = $_POST['user_email'];
+      $user_password = $_POST['user_password'];
+  
+      // Обновляем данные пользователя в БД
+      $sql = "UPDATE Users SET email = '$user_email', password_hash = '$user_password' WHERE email = '{$_SESSION['user_email']}'";
+  
+      if ($con->query($sql)) {
+          // Обновляем данные в сессии
+          $_SESSION['user_email'] = $user_email;
+          $_SESSION['user_password'] = $user_password;
+  
+          echo 'Данные успешно изменены';
+      } else {
+          echo 'Ошибка при изменении данных';
+      }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +31,9 @@
     <title>Личный кабинет</title>
 </head>
 <body>
+  <header>
+    <?php include "header-pers.php"; ?>
+  </header>
     <main>
         <div class="container">
         <h2 class="text-personal-account">Личный кабинет</h2>
@@ -22,12 +41,24 @@
     <div> 
         <img src="images\free-icon-boy-4537069.png" class="img-user" alt=""> 
     </div> 
-    <form action="" method="post" class="form-user-info"> 
-        <input type="email" placeholder="имя" value="<?php echo isset($_SESSION['user_email']) ? $_SESSION['user_email'] : ''; ?>"> <!-- Изменено на вывод пароля -->
-        <input type="password" name="user_email" placeholder="email" value="<?php echo isset($_SESSION['user_password']) ? $_SESSION['user_password'] : ''; ?>"> 
-        <p>Бонусы:0<value[]></p> 
-        <button name="edit" class="edit">Изменить </button> 
-    </form> 
+    <form action="" method="post" class="form-user-info">
+    <input type="email" name="user_email" placeholder="email" value="<?php echo isset($_SESSION['user_email']) ? $_SESSION['user_email'] : ''; ?>">
+    <input type="password" name="user_password" id="password-field" placeholder="password" value="<?php echo isset($_SESSION['user_password']) ? $_SESSION['user_password'] : ''; ?>">
+    <button type="button" class="entrance" onclick="togglePassword()">пароль</button>
+    <p>Бонусы:0<value[]></p>
+    <button name="edit" class="edit">Изменить </button>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password-field");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</form>
 </div>
                         <h3 class="order">Мои заказы</h3>
                         <table>
@@ -61,25 +92,3 @@
 </footer>
 </body>
 </html>
-<!-- модальное окно для отзыва -->
-<div class="modal fade" id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Оставьте отзыв</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Сообщение:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Оставить отзыв</button>
-      </div>
-    </div>
-  </div>
-</div>
