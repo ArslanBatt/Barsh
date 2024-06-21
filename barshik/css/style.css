@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* шапка */
+header {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgb(0, 0, 0), #0DB295);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* каталог */
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    gap: 4vh;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-category {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-category:hover {
+    background-color: #0DB295;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.tovar img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.drink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bloc-drinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.button-tovar {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-tovar:hover {
+    background-color: #0DB295;
+}
+
+.podrobnee {
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.podrobnee:hover {
+    background-color: #0DB295;
+}
+
+/* часть с текстом */
+.description {
+    background-color: black;
+    color: aliceblue;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.img-description {
+    max-height: 300px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgb(0, 0, 0), #0DB295);
+    color: aliceblue;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.images-connection img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+}
+
+.copirater {
+    margin-top: 20px;
+}
+
+.clock-work, .connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* формы авторизации и регистрации */
+.form-auto, .form-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+}
+
+.auto-main, .registr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.entrance, .button-reg {
+    width: 100%;
+    padding: 10px;
+    background-color: #969696;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0DB295;
+}
+
+.drink p {
+    font-weight: 500;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* блок с отзывами */
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.reviews {
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.user-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.otzv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(146, 146, 146, 0.322);
+    width: 25rem;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.text-reviews {
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+
+.reviews {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.text-reviews {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.otzv {
+    flex: 0 0 98.7%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: left;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.slider-nav button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}

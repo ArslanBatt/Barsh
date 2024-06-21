@@ -1,9 +1,6 @@
 <?php
 session_start();
-
-// Уничтожаем сессию
+$_SESSION=array();
 session_destroy();
-
-// Перенаправляем на страницу авторизации
-header('Location: auto.php');
+header("location: /");
 ?>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(rgb(0, 0, 0), #0DB295);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 126px;
+    padding: 0 20px;
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.nav ul {
+    list-style-type: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    transition: transform 0.3s;
+}
+
+.nav a:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cart_account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-products, .adding, .edit-tovar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-products form, .adding form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-products input[type="text"], .adding input[type="text"], .adding input[type="file"], .adding select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 48%;
+    max-width: 300px;
+}
+
+.filter-products button, .adding button {
+    padding: 10px 20px;
+    background-color: #0DB295;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-products button:hover, .adding button:hover {
+    background-color: #0a8a73;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.img-product-admin {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.edit-tovar {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+input[type="text"], select {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0DB295;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0a8a73;
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#0DB295, rgb(0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-products form, .adding form {
+        flex-direction: column;
+    }
+
+    .filter-products input[type="text"], .adding input[type="text"], .adding input[type="file"], .adding select {
+        width: 100%;
+    }
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Цвет фона таблиц */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень для таблиц */
+}
+
+.table th, .table td {
+    padding: 10px;
+}
+
+.table th {
+    background-color: #343a40; /* Цвет фона заголовков таблиц */
+    color: #ffffff; /* Цвет текста заголовков таблиц */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; /* Цвет фона нечетных строк */
+}

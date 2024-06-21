@@ -1,35 +1,41 @@
+<?php
+session_start();
+if(isset($_SESSION["message"])){
+    $mes = $_SESSION["message"];
+    echo "<script>toastr.success('$mes')</script>";
+    unset($_SESSION["message"]);
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-header.css">
-    <title>Главная</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <title>БарШик</title>
+    <link rel="stylesheet" href="css/style-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
-<body >
-    <header  content="width=device-width, initial-scale=1">
-        <div class="container">
-            <div class="naw-header">
-                <img src="../images\Group 8192.png" alt="" class="logo">
-                <h1>БарШик</h1>
-                <div class="naw-menu">
-                    <a href="/">Главная</a>
-                    <a href="">Каталог</a>
-                    <a href="#footer">Контакты</a>
+<body>
+<header>
+    <div class="container">
+        <div class="nav-header">
+            <img src="images/Group 8192.png" alt="Логотип" class="logo">
+            <h1>БарШик</h1>
+            <nav class="nav-menu">
+                <a href="/">Главная</a>
+                <a href="/catalog.php">Каталог</a>
+                <a href="#footer">Контакты</a>
+                <?php if(isset($_SESSION["User_id"])) { ?>
+                    <a href="/personal-cab.php">Личный кабинет</a>
+                    <a href="/cart.php">Корзина</a>
+                    <a href="/logout.php">Выйти</a>
+                <?php } else { ?>
                     <a href="auto.php">Войти</a>
-                </div>
-            </div>
+                <?php } ?>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
+</body>
+</html>
